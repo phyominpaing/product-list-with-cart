@@ -1,11 +1,11 @@
 "use client";
 
-import useProduct from "@/store/useProduct";
 import React from "react";
 import ProductCard from "./ProductCard";
+import useProductStore from "@/store/useProductStore";
 
 const ProductList = () => {
-  const { products } = useProduct();
+  const { products } = useProductStore();
 
   return (
     <div className="grid grid-cols-3  gap-y-8 gap-x-6 ">

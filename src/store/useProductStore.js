@@ -1,10 +1,10 @@
 import products from "../data/data.json";
 const { create } = require("zustand");
 
-const useProduct = create(() => ({
+const useProductStore = create(() => ({
   products,
 
 }));
 
 
-export default useProduct;
+export default useProductStore;
