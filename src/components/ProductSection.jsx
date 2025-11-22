@@ -1,15 +1,15 @@
 import React from "react";
-import ProductCard from "./ProductCard";
+import ProductList from "./ProductList";
 
 const ProductSection = () => {
   return (
     <section>
       <div className="mb-9">
-        <h1 className=" font-redhat font-bold text-4xl text-rose-900">Desserts</h1>
+        <h1 className=" font-redhat font-bold text-4xl text-rose-900">
+          Desserts
+        </h1>
       </div>
-      <div className="">
-        <ProductCard />
-      </div>
+      <ProductList />
     </section>
   );
 };

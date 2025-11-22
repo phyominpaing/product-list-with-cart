@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-3 gap-4 min-h-screen w-full p-24  bg-rose-50">
+    <div className="grid grid-cols-3 gap-4 min-h-screen w-full px-28 py-16  bg-rose-50">
       <div className="col-span-2">
         <ProductSection/>
       </div>
