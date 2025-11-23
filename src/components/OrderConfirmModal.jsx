@@ -1,11 +1,10 @@
-'use client';
+"use client";
 import useCartStore from "@/store/useCartStore";
 import Image from "next/image";
 import React from "react";
 
 const OrderConfirmModal = ({ setIsModalOpen }) => {
-
-const {items , clearCart} = useCartStore();
+  const { items, clearCart } = useCartStore();
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -15,10 +14,7 @@ const {items , clearCart} = useCartStore();
   const total = items.reduce((pv, cv) => pv + cv.price * cv.quantity, 0);
 
   return (
-    <div
-      onClick={handleCloseModal}
-      className="fixed  inset-0 bg-opacity-25 backdrop-blur-sm flex justify-center items-center"
-    >
+    <div className="fixed inset-0 bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
       <div className="flex flex-col w-[520px] h-auto justify-between items-center mt-auto bg-white rounded-t-2xl p-6 md:mt-15 md:rounded-xl">
         <div className="flex flex-col w-full justify-center items-start gap-4 p-4">
           <Image
@@ -89,7 +85,7 @@ const {items , clearCart} = useCartStore();
         </div>
         <button
           onClick={handleCloseModal}
-          className="button cursor-pointer mt-auto w-full flex justify-center items-center px-2 py-4 text-base font-semibold text-white bg-red rounded-3xl mb-2"
+          className="button  cursor-pointer mt-auto w-full flex justify-center items-center px-2 py-4 text-base font-semibold text-white bg-red duration-200 hover:bg-rose-800  rounded-full mb-2"
         >
           <span>Start New Order</span>
         </button>

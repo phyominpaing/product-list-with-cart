@@ -3,7 +3,7 @@ import ProductSection from "@/components/ProductSection";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-3 gap-4 min-h-screen w-full px-28 py-16  bg-rose-100">
+    <main className="grid grid-cols-3 gap-6 min-h-screen w-full px-28 py-16  bg-rose-50">
       <div className="col-span-2">
         <ProductSection />
       </div>
