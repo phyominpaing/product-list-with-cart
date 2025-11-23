@@ -1,11 +1,16 @@
 import useCartStore from "@/store/useCartStore";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import OrderConfirmModal from "./OrderConfirmModal";
 
 const CartItemSummary = () => {
   const { items } = useCartStore();
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const total = items.reduce((pv, cv) => pv + cv.price * cv.quantity, 0);
+
+  const handleOpenModal = () => setIsModalOpen(true);
 
   return (
     <>
@@ -36,9 +41,13 @@ const CartItemSummary = () => {
               delivery
             </p>
           </div>
-          <button className="button w-full py-4 text-base font-semibold text-white bg-red rounded-full duration-200 hover:bg-rose-800 ">
+          <button
+            onClick={handleOpenModal}
+            className="button cursor-pointer w-full py-4 text-base font-semibold text-white bg-red rounded-full duration-200 hover:bg-rose-800 "
+          >
             Confirm Order
           </button>
+          {isModalOpen && <OrderConfirmModal setIsModalOpen={setIsModalOpen}  items={items}/>}
         </div>
       )}
     </>

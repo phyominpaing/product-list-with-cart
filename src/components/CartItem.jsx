@@ -31,7 +31,7 @@ const CartItem = ({ item: { name, price, quantity } }) => {
                 width={22}
                 height={22}
                 onClick={handleRemoveItem}
-                className="rounded-full border-2 w-auto h-auto border-rose-400 px-1 py-1 hover:border-rose-900 hover:text-rose-900"
+                className="rounded-full cursor-pointer border-2 w-auto h-auto border-rose-400 px-1 py-1 hover:border-rose-900 hover:text-rose-900"
               />
             </button>
           </div>

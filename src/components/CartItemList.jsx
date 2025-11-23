@@ -6,7 +6,6 @@ import CartItemSummary from "./CartItemSummary";
 
 const CartItemList = () => {
   const { items } = useCartStore();
-  console.log(items);
 
   return (
     <div className="bg-white rounded-lg w-full lg:py-0">
