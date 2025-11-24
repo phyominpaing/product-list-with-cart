@@ -27,7 +27,7 @@ const OrderConfirmModal = ({ setIsModalOpen }) => {
             src="/assets/images/icon-order-confirmed.svg"
             style={{ color: "transparent" }}
           />
-          <h2 className="text-rose-900 text-4xl font-bold">Order Confirmed</h2>
+          <h2 className="text-rose-900 text-5xl md:text-4xl font-bold">Order Confirmed</h2>
           <p className="text-base text-rose-500 font-normal">
             we hope you enjoy your food.
           </p>
@@ -85,7 +85,7 @@ const OrderConfirmModal = ({ setIsModalOpen }) => {
         </div>
         <button
           onClick={handleCloseModal}
-          className="button  cursor-pointer mt-auto w-full flex justify-center items-center px-2 py-4 text-base font-semibold text-white bg-red duration-200 hover:bg-rose-800  rounded-full mb-2"
+          className="button cursor-pointer mt-auto w-full flex justify-center items-center px-2 py-4 text-base font-semibold text-white bg-red duration-200 hover:bg-rose-800  rounded-full mb-2"
         >
           <span>Start New Order</span>
         </button>

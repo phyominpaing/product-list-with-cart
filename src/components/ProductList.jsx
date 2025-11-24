@@ -8,7 +8,7 @@ const ProductList = () => {
   const { products } = useProductStore();
 
   return (
-    <div className="grid grid-cols-3  gap-y-8 gap-x-6 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-6">
       {products.map((product , index) => (
           <ProductCard key={index} product={product}/>
       ))}

@@ -51,44 +51,48 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
         />
 
         {isExistedItem ? (
-          <button className="relative  rounded-3xl border-2 border-rose-400  px-7 py-2  bg-red flex justify-between items-center gap-8 cursor-pointer left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all hover:border-red hover:text-red duration-200  animate-scale-in">
+          <button className="relative rounded-3xl border-2 border-rose-400 px-10 py-3 md:px-7 md:py-2 lg:px-6 lg:py-1.5 xl:px-7 xl:py-2   bg-red flex justify-between items-center gap-8 md:gap-8 lg:gap-6 xl:gap-7 cursor-pointer left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all hover:border-red hover:text-red duration-200 animate-scale-in">
             <div
               onClick={handleDecreaseQuantity}
-              className="font-bold rounded-full border-white border-2 px-1 py-2 transition-transform "
+              className="font-bold rounded-full border-white border-2 p-1.5 md:px-1 md:py-1 transition-transform"
             >
               <Image
                 src="/assets/images/icon-decrement-quantity.svg"
-                alt="remove button Icon"
-                width={10}
-                height={10}
+                alt="add button Icon"
+                width={14}
+                height={14}
+                className="w-2 h-2 md:w-2.5 md:h-2.5 items-center"
               />
             </div>
-            <span className="font-semibold text-white">{quantity}</span>
-            <div
+            <span className="font-semibold text-white text-sm md:text-base">
+              {quantity}
+            </span>
+             <div
               onClick={handleIncreaseQuantity}
-              className="font-bold rounded-full border-white border-2 px-1 py-1 transition-transform"
+              className="font-bold rounded-full border-white border-2 p-1.5 md:px-1 md:py-1 transition-transform"
             >
               <Image
                 src="/assets/images/icon-increment-quantity.svg"
                 alt="add button Icon"
-                width={10}
-                height={10}
+                width={14}
+                height={14}
+                className="w-2 h-2 md:w-2.5 md:h-2.5 items-center"
               />
             </div>
           </button>
         ) : (
           <button
             onClick={handleAddItem}
-            className="relative  rounded-3xl border-2 border-rose-400  px-6 py-2  bg-white flex justify-between items-center gap-4 cursor-pointer left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all hover:border-red hover:text-red duration-200 hover:scale-105 animate-scale-in"
+            className="relative rounded-3xl border-2 border-rose-400 px-12 py-3 md:px-6 md:py-2 lg:px-4 lg:py-2 xl:px-6 bg-white flex justify-between items-center gap-4 md:gap-4 lg:gap-3 xl:gap-4 cursor-pointer left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all hover:border-red hover:text-red duration-200 hover:scale-105 animate-scale-in"
           >
             <Image
               src="/assets/images/icon-add-to-cart.svg"
               alt="image cart icon"
-              width={20}
-              height={20}
-              className="w-5 h-auto"
+              width={16}
+              height={16}
+              className="w-6 h-6 md:w-5 md:h-auto lg:w-4 lg:h-auto"
             />
-            <span className="font-semibold w-auto h-auto text-rose-900">
+            <span className="font-semibold w-auto h-auto text-rose-900 text-base lg:text-sm xl:text-base">
               {" "}
               Add to Cart
             </span>

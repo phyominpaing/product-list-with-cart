@@ -43,7 +43,7 @@ const CartItemSummary = () => {
           </div>
           <button
             onClick={handleOpenModal}
-            className="button cursor-pointer w-full py-4 text-base font-semibold text-white bg-red rounded-full duration-200 hover:bg-rose-800 "
+            className="button cursor-pointer w-full py-4 md:py-4 text-sm md:text-base font-semibold text-white bg-red rounded-full duration-200 hover:bg-rose-800 "
           >
             Confirm Order
           </button>
