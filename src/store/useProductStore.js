@@ -3,8 +3,6 @@ const { create } = require("zustand");
 
 const useProductStore = create(() => ({
   products,
-
 }));
-
 
 export default useProductStore;

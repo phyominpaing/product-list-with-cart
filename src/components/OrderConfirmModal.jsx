@@ -31,7 +31,7 @@ const OrderConfirmModal = ({ setIsModalOpen }) => {
             Order Confirmed
           </h2>
           <p className="text-base text-rose-500 font-normal">
-            we hope you enjoy your food.
+            We hope you enjoy your food.
           </p>
         </div>
         <div className=" bg-rose-50 px-4 py-2 mb-6 rounded-lg w-full">

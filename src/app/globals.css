@@ -5,24 +5,24 @@
     font-family: "RedHatText";
     src: url("/assets/fonts/static/RedHatText-Regular.ttf");
     font-weight: 400;
-    /* font-style: normal;
-    font-display: swap; */
+    font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
     font-family: "RedHatText";
     src: url("/assets/fonts/static/RedHatText-SemiBold.ttf");
     font-weight: 600;
-    /* font-style: normal;
-    font-display: swap; */
+    font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
     font-family: "RedHatText";
     src: url("/assets/fonts/static/RedHatText-Bold.ttf");
     font-weight: 700;
-    /* font-style: normal;
-    font-display: swap; */
+    font-style: normal;
+    font-display: swap;
   }
 }
 
@@ -68,10 +68,4 @@
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
   background: oklch(0.4 0 0);
 }
-
-
-
-/* Responsive adjustments for images/buttons if needed */
-/* Most responsiveness is handled by Tailwind CSS */
-
 

@@ -10,7 +10,7 @@ const CartSection = () => {
   const totalQuantity = items.reduce((pv, cv) => pv + cv.quantity, 0);
 
   return (
-    <section className="bg-white rounded-lg w-full py-4 px-4 sm:px-6 lg:py-8 flex flex-col gap-2 md:mt-8 lg:mt-0">
+    <section className="bg-white rounded-lg w-full py-4 px-4 sm:px-6 lg:py-8 flex flex-col gap-4 md:mt-8 lg:mt-0">
       <h2 className="text-2xl font-bold text-red">
         Your Cart ({totalQuantity})
       </h2>

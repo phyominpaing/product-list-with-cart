@@ -11,7 +11,7 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
 
   const quantity = isExistedItem ? isExistedItem.quantity : 0;
 
-  const handleAddItem = () => {  
+  const handleAddItem = () => {
     if (isExistedItem) {
       updateQuantity(isExistedItem.name, 1);
     } else {
@@ -27,7 +27,7 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
     }
   };
 
-  const handleIncreaseQuantity = () => { 
+  const handleIncreaseQuantity = () => {
     updateQuantity(name, 1);
   };
 
@@ -48,7 +48,9 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
           alt={name}
           width={250}
           height={230}
-          className="w-full h-auto object-cover rounded-lg md:hidden"
+          className={`${
+            isExistedItem && " border-2 border-red "
+          } w-full  h-auto object-cover rounded-lg md:hidden`}
         />
 
         {/* Tablet Image */}
@@ -57,7 +59,9 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
           alt={name}
           width={400}
           height={350}
-          className="w-full h-auto object-cover rounded-lg hidden md:block lg:hidden"
+          className={`${
+            isExistedItem && " border-2 border-red "
+          } w-full h-auto object-cover rounded-lg hidden md:block lg:hidden`}
         />
 
         {/* Desktop Image  */}
@@ -66,11 +70,13 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
           alt={name}
           width={500}
           height={400}
-          className="w-full h-auto object-cover rounded-lg hidden lg:block"
+          className={`${
+            isExistedItem && " border-2 border-red "
+          } w-full h-auto object-cover rounded-lg hidden lg:block`}
         />
 
         {isExistedItem ? (
-          <button className="relative rounded-3xl border-2 border-rose-400 px-10 py-3 md:px-7 md:py-2 lg:px-6 lg:py-1.5 xl:px-7 xl:py-2   bg-red flex justify-between items-center gap-8 md:gap-8 lg:gap-6 xl:gap-7 cursor-pointer left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all hover:border-red hover:text-red duration-200 animate-scale-in">
+          <button className="relative rounded-3xl border-2 border-rose-400 px-10 py-3 md:px-7 md:py-2 lg:px-8 lg:py-1.5 xl:px-7 xl:py-2 bg-red flex justify-between items-center gap-8 md:gap-8 lg:gap-6 xl:gap-7 cursor-pointer left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all hover:border-red hover:text-red duration-200 animate-scale-in">
             <div
               onClick={handleDecreaseQuantity}
               className="font-bold rounded-full border-white border-2 p-1.5 md:px-1 md:py-1 transition-transform"
