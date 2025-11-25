@@ -10,7 +10,7 @@ const CartItemList = () => {
   return (
     <div className="bg-white rounded-lg w-full lg:py-0">
       {items.length === 0 && (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col gap-2 items-center justify-center">
           <img
             alt="image icon of cake"
             width={128}

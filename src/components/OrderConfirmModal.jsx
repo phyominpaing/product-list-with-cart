@@ -27,7 +27,7 @@ const OrderConfirmModal = ({ setIsModalOpen }) => {
             src="/assets/images/icon-order-confirmed.svg"
             style={{ color: "transparent" }}
           />
-          <h2 className="text-rose-900 text-5xl md:text-4xl font-bold">
+          <h2 className="text-rose-900 text-5xl  md:text-4xl font-bold">
             Order Confirmed
           </h2>
           <p className="text-base text-rose-500 font-normal">
