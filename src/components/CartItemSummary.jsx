@@ -5,7 +5,7 @@ import OrderConfirmModal from "./OrderConfirmModal";
 
 const CartItemSummary = () => {
   const { items } = useCartStore();
-  
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const total = items.reduce((pv, cv) => pv + cv.price * cv.quantity, 0);
@@ -47,7 +47,9 @@ const CartItemSummary = () => {
           >
             Confirm Order
           </button>
-          {isModalOpen && <OrderConfirmModal setIsModalOpen={setIsModalOpen}  items={items}/>}
+          {isModalOpen && (
+            <OrderConfirmModal setIsModalOpen={setIsModalOpen} items={items} />
+          )}
         </div>
       )}
     </>

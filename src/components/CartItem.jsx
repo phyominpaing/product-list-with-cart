@@ -9,13 +9,14 @@ const CartItem = ({ item: { name, price, quantity } }) => {
   const handleRemoveItem = () => {
     removeFromCart(name);
   };
+
   return (
     <div>
       <ul>
         <li className="flex flex-col justify-between items-center gap-2 py-2">
           <div className="flex justify-between w-full py-2 text-sm leading-5">
             <div className="space-y-2">
-              <p className="text-rose-900 font-semibold">{name}</p> 
+              <p className="text-rose-900 font-semibold">{name}</p>
               <p className="text-rose-400 font-semibold">
                 <span className=" text-red font-semibold pr-4">
                   {quantity}x
@@ -26,7 +27,7 @@ const CartItem = ({ item: { name, price, quantity } }) => {
                 </span>
               </p>
             </div>
-            <button >
+            <button>
               <Image
                 src="/assets/images/icon-remove-item.svg"
                 alt="remove button Icon"

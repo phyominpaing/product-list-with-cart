@@ -22,7 +22,6 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
         price,
         quantity: 1,
       };
-
       addToCart(newItem);
     }
   };

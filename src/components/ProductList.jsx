@@ -9,8 +9,8 @@ const ProductList = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-6">
-      {products.map((product , index) => (
-          <ProductCard key={index} product={product}/>
+      {products.map((product, index) => (
+        <ProductCard key={index} product={product} />
       ))}
     </div>
   );

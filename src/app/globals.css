@@ -49,7 +49,6 @@
   --breakpoint-desktop: 1440px;
 }
 
-/*  Custom scrollbar styling for modern browsers */
 .scrollbar-custom::-webkit-scrollbar {
   width: 3px;
 }
@@ -68,4 +67,3 @@
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
   background: oklch(0.4 0 0);
 }
-
