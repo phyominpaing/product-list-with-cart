@@ -45,8 +45,8 @@
   --text-product: 16px;
 
   /* Screens */
-  /* --breakpoint-mobile: 375px; */
-  /* --breakpoint-desktop: 1440px; */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
 }
 
 /*  Custom scrollbar styling for modern browsers */
@@ -68,6 +68,8 @@
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
   background: oklch(0.4 0 0);
 }
+
+
 
 /* Responsive adjustments for images/buttons if needed */
 /* Most responsiveness is handled by Tailwind CSS */

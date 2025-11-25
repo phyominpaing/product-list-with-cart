@@ -11,7 +11,7 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
 
   const quantity = isExistedItem ? isExistedItem.quantity : 0;
 
-  const handleAddItem = () => {
+  const handleAddItem = () => {  
     if (isExistedItem) {
       updateQuantity(isExistedItem.name, 1);
     } else {
@@ -27,7 +27,7 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
     }
   };
 
-  const handleIncreaseQuantity = () => {
+  const handleIncreaseQuantity = () => { 
     updateQuantity(name, 1);
   };
 
@@ -42,12 +42,31 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
   return (
     <div>
       <div>
+        {/* Mobile Image */}
         <Image
-          src={image.desktop}
-          alt="Waffle with Berries"
+          src={image.mobile}
+          alt={name}
           width={250}
           height={230}
-          className=" h-auto w-full object-cover rounded-lg overflow-hidden border-none"
+          className="w-full h-auto object-cover rounded-lg md:hidden"
+        />
+
+        {/* Tablet Image */}
+        <Image
+          src={image.tablet}
+          alt={name}
+          width={400}
+          height={350}
+          className="w-full h-auto object-cover rounded-lg hidden md:block lg:hidden"
+        />
+
+        {/* Desktop Image  */}
+        <Image
+          src={image.desktop}
+          alt={name}
+          width={500}
+          height={400}
+          className="w-full h-auto object-cover rounded-lg hidden lg:block"
         />
 
         {isExistedItem ? (
@@ -67,7 +86,7 @@ const ProductCard = ({ product: { image, category, name, price } }) => {
             <span className="font-semibold text-white text-sm md:text-base">
               {quantity}
             </span>
-             <div
+            <div
               onClick={handleIncreaseQuantity}
               className="font-bold rounded-full border-white border-2 p-1.5 md:px-1 md:py-1 transition-transform"
             >

@@ -14,7 +14,7 @@ const OrderConfirmModal = ({ setIsModalOpen }) => {
   const total = items.reduce((pv, cv) => pv + cv.price * cv.quantity, 0);
 
   return (
-    <div className="fixed inset-0 bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
+    <div className="fixed max-h-full inset-0 bg-opacity-25 backdrop-brightness-50 backdrop-blur-xs flex justify-center items-center">
       <div className="flex flex-col w-[520px] h-auto justify-between items-center mt-auto bg-white rounded-t-2xl p-6 md:mt-15 md:rounded-xl">
         <div className="flex flex-col w-full justify-center items-start gap-4 p-4">
           <Image
@@ -27,7 +27,9 @@ const OrderConfirmModal = ({ setIsModalOpen }) => {
             src="/assets/images/icon-order-confirmed.svg"
             style={{ color: "transparent" }}
           />
-          <h2 className="text-rose-900 text-5xl md:text-4xl font-bold">Order Confirmed</h2>
+          <h2 className="text-rose-900 text-5xl md:text-4xl font-bold">
+            Order Confirmed
+          </h2>
           <p className="text-base text-rose-500 font-normal">
             we hope you enjoy your food.
           </p>
@@ -47,7 +49,7 @@ const OrderConfirmModal = ({ setIsModalOpen }) => {
                         width={50}
                         height={50}
                         className="rounded-lg"
-                        src={item.image.thumbnail || "/placeholder.svg"}
+                        src={item.image.thumbnail}
                         style={{ color: "transparent" }}
                       />
                       <div className="text-sm flex flex-col gap-1">
